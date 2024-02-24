@@ -25,6 +25,18 @@
 		FA4237A52B8A2D3C00334A3E /* BillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237A42B8A2D3C00334A3E /* BillInputView.swift */; };
 		FA4237A72B8A2D4F00334A3E /* TipInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237A62B8A2D4F00334A3E /* TipInputView.swift */; };
 		FA4237A92B8A2D6E00334A3E /* SplitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237A82B8A2D6E00334A3E /* SplitInputView.swift */; };
+		FA4237AC2B8A315100334A3E /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237AB2B8A315100334A3E /* ThemeColor.swift */; };
+		FA4237AE2B8A315B00334A3E /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237AD2B8A315B00334A3E /* ThemeFont.swift */; };
+		FA4237B12B8A319F00334A3E /* UIColor+ Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237B02B8A319F00334A3E /* UIColor+ Extension.swift */; };
+		FA4237B42B8A346900334A3E /* FixelDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237B32B8A346900334A3E /* FixelDisplay-Regular.ttf */; };
+		FA4237B52B8A346900334A3E /* FixelDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237B32B8A346900334A3E /* FixelDisplay-Regular.ttf */; };
+		FA4237B62B8A346900334A3E /* FixelDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237B32B8A346900334A3E /* FixelDisplay-Regular.ttf */; };
+		FA4237BB2B8A353F00334A3E /* FixelDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237B92B8A353F00334A3E /* FixelDisplay-Bold.ttf */; };
+		FA4237BC2B8A353F00334A3E /* FixelDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237B92B8A353F00334A3E /* FixelDisplay-Bold.ttf */; };
+		FA4237BD2B8A353F00334A3E /* FixelDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237B92B8A353F00334A3E /* FixelDisplay-Bold.ttf */; };
+		FA4237BE2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237BA2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf */; };
+		FA4237BF2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237BA2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf */; };
+		FA4237C02B8A353F00334A3E /* FixelDisplay-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA4237BA2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +74,12 @@
 		FA4237A42B8A2D3C00334A3E /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
 		FA4237A62B8A2D4F00334A3E /* TipInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipInputView.swift; sourceTree = "<group>"; };
 		FA4237A82B8A2D6E00334A3E /* SplitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitInputView.swift; sourceTree = "<group>"; };
+		FA4237AB2B8A315100334A3E /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		FA4237AD2B8A315B00334A3E /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
+		FA4237B02B8A319F00334A3E /* UIColor+ Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ Extension.swift"; sourceTree = "<group>"; };
+		FA4237B32B8A346900334A3E /* FixelDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		FA4237B92B8A353F00334A3E /* FixelDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		FA4237BA2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelDisplay-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +136,8 @@
 		FA42375D2B8A256E00334A3E /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				FA4237AF2B8A318700334A3E /* Extension */,
+				FA4237AA2B8A313700334A3E /* Config */,
 				FA42379F2B8A2BE200334A3E /* Views */,
 				FA42375E2B8A256E00334A3E /* AppDelegate.swift */,
 				FA4237602B8A256E00334A3E /* SceneDelegate.swift */,
@@ -163,6 +183,34 @@
 				FA4237A82B8A2D6E00334A3E /* SplitInputView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FA4237AA2B8A313700334A3E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FA4237B22B8A341900334A3E /* Font */,
+				FA4237AB2B8A315100334A3E /* ThemeColor.swift */,
+				FA4237AD2B8A315B00334A3E /* ThemeFont.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		FA4237AF2B8A318700334A3E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA4237B02B8A319F00334A3E /* UIColor+ Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FA4237B22B8A341900334A3E /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FA4237B92B8A353F00334A3E /* FixelDisplay-Bold.ttf */,
+				FA4237BA2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf */,
+				FA4237B32B8A346900334A3E /* FixelDisplay-Regular.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA42376B2B8A257000334A3E /* LaunchScreen.storyboard in Resources */,
+				FA4237BB2B8A353F00334A3E /* FixelDisplay-Bold.ttf in Resources */,
+				FA4237BE2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf in Resources */,
+				FA4237B42B8A346900334A3E /* FixelDisplay-Regular.ttf in Resources */,
 				FA4237682B8A257000334A3E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +345,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4237BF2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf in Resources */,
+				FA4237B52B8A346900334A3E /* FixelDisplay-Regular.ttf in Resources */,
+				FA4237BC2B8A353F00334A3E /* FixelDisplay-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +355,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4237C02B8A353F00334A3E /* FixelDisplay-SemiBold.ttf in Resources */,
+				FA4237B62B8A346900334A3E /* FixelDisplay-Regular.ttf in Resources */,
+				FA4237BD2B8A353F00334A3E /* FixelDisplay-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +370,12 @@
 			files = (
 				FA4237632B8A256E00334A3E /* CalculatorVC.swift in Sources */,
 				FA4237A12B8A2BF600334A3E /* LogoView.swift in Sources */,
+				FA4237AC2B8A315100334A3E /* ThemeColor.swift in Sources */,
 				FA4237A52B8A2D3C00334A3E /* BillInputView.swift in Sources */,
 				FA4237A32B8A2D2400334A3E /* ResultView.swift in Sources */,
 				FA42375F2B8A256E00334A3E /* AppDelegate.swift in Sources */,
+				FA4237AE2B8A315B00334A3E /* ThemeFont.swift in Sources */,
+				FA4237B12B8A319F00334A3E /* UIColor+ Extension.swift in Sources */,
 				FA4237612B8A256E00334A3E /* SceneDelegate.swift in Sources */,
 				FA4237A92B8A2D6E00334A3E /* SplitInputView.swift in Sources */,
 				FA4237A72B8A2D4F00334A3E /* TipInputView.swift in Sources */,
