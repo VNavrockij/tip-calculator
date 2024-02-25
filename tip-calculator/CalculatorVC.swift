@@ -10,11 +10,11 @@ import SnapKit
 
 class CalculatorVC: UIViewController {
 
-    private let logoView = LogoView()
-    private let resultView = ResultView()
-    private let billInputView = BillInputView()
-    private let tipInputView = TipInputView()
-    private let splitInputView = SplitInputView()
+    private lazy var logoView = LogoView()
+    private lazy var resultView = ResultView()
+    private lazy var billInputView = BillInputView()
+    private lazy var tipInputView = TipInputView()
+    private lazy var splitInputView = SplitInputView()
 
     private lazy var vStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
