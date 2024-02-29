@@ -34,8 +34,32 @@ class BillInputView: UIView {
         textField.font = ThemeFont.semibold(ofSize: 28)
         textField.keyboardType = .decimalPad
         textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        textField.tintColor = ThemeColor.text
+        textField.textColor = ThemeColor.text
+        // Add toolBar
+        let toolBar = UIToolbar(frame: CGRect(x: .zero, y: .zero, width: frame.size.width, height: 36))
+        toolBar.barStyle = .default
+        toolBar.sizeToFit()
+        let doneButton = UIBarButtonItem(
+            title: "Done",
+            style: .plain,
+            target: self,
+            action: #selector(doneButtonTapped))
+        toolBar.items = [
+            UIBarButtonItem(
+                barButtonSystemItem: .flexibleSpace,
+                target: nil,
+                action: nil),
+            doneButton
+        ]
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
         return textField
     }()
+
+    @objc private func doneButtonTapped() {
+        textField.endEditing(true)
+    }
 
     init() {
         super.init(frame: .zero)
@@ -47,7 +71,32 @@ class BillInputView: UIView {
     }
 
     private func layout() {
-        backgroundColor = .green
+        [headerView, textFieldContainerView].forEach(addSubview(_:))
+
+        headerView.snp.makeConstraints { make in
+            make.leading.equalToSuperview()
+            make.centerY.equalTo(textFieldContainerView.snp.centerY)
+            make.width.equalTo(68)
+            make.height.equalTo(24)
+            make.trailing.equalTo(textFieldContainerView.snp.leading).offset(-24)
+        }
+        textFieldContainerView.snp.makeConstraints { make in
+            make.top.trailing.bottom.equalToSuperview()
+        }
+
+        textFieldContainerView.addSubview(currencyDenominationLabel)
+        textFieldContainerView.addSubview(textField)
+
+        currencyDenominationLabel.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.leading.equalTo(textFieldContainerView.snp.leading).offset(16)
+        }
+
+        textField.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.leading.equalTo(currencyDenominationLabel.snp.trailing).offset(16)
+            make.trailing.equalTo(textFieldContainerView.snp.trailing).offset(-16)
+        }
     }
 
 }
