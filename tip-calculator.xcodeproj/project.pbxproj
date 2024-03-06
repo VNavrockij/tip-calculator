@@ -41,6 +41,8 @@
 		FA4237C32B8A384C00334A3E /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237C22B8A384C00334A3E /* LabelFactory.swift */; };
 		FA4237C42B8A384C00334A3E /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237C22B8A384C00334A3E /* LabelFactory.swift */; };
 		FA4237C52B8A384C00334A3E /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4237C22B8A384C00334A3E /* LabelFactory.swift */; };
+		FA6CDB3D2B98B9810037A352 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CDB3C2B98B9810037A352 /* Tip.swift */; };
+		FA6CDB3F2B98B9C40037A352 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CDB3E2B98B9C40037A352 /* HeaderView.swift */; };
 		FAAE6EBE2B8CF32900B65723 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE6EBD2B8CF32900B65723 /* AmountView.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		FA4237B92B8A353F00334A3E /* FixelDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		FA4237BA2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelDisplay-SemiBold.ttf"; sourceTree = "<group>"; };
 		FA4237C22B8A384C00334A3E /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		FA6CDB3C2B98B9810037A352 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		FA6CDB3E2B98B9C40037A352 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FAAE6EBD2B8CF32900B65723 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 		FA42375D2B8A256E00334A3E /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				FA6CDB3A2B98B96F0037A352 /* Model */,
 				FA4237C12B8A382F00334A3E /* Factory */,
 				FA4237AF2B8A318700334A3E /* Extension */,
 				FA4237AA2B8A313700334A3E /* Config */,
@@ -191,6 +196,7 @@
 				FA4237A42B8A2D3C00334A3E /* BillInputView.swift */,
 				FA4237A62B8A2D4F00334A3E /* TipInputView.swift */,
 				FA4237A82B8A2D6E00334A3E /* SplitInputView.swift */,
+				FA6CDB3E2B98B9C40037A352 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +236,14 @@
 				FA4237C22B8A384C00334A3E /* LabelFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		FA6CDB3A2B98B96F0037A352 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CDB3C2B98B9810037A352 /* Tip.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,8 +413,10 @@
 				FA4237C32B8A384C00334A3E /* LabelFactory.swift in Sources */,
 				FA4237B12B8A319F00334A3E /* UIColor+Extension.swift in Sources */,
 				FA4237612B8A256E00334A3E /* SceneDelegate.swift in Sources */,
+				FA6CDB3D2B98B9810037A352 /* Tip.swift in Sources */,
 				FA4237A92B8A2D6E00334A3E /* SplitInputView.swift in Sources */,
 				FA4237A72B8A2D4F00334A3E /* TipInputView.swift in Sources */,
+				FA6CDB3F2B98B9C40037A352 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
