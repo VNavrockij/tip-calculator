@@ -44,12 +44,30 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>tip-calculator.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>FA42375A2B8A256E00334A3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA4237702B8A257100334A3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA42377A2B8A257100334A3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
