@@ -28,8 +28,8 @@ class CalculatorVM {
 //            print("The bill: \(bill)")
 //        }.store(in: &cancellables)
 
-        input.tipPublisher.sink { tip in
-            print("Tip: \(tip)")
+        input.splitPublisher.sink { split in
+            print("split: \(split)")
         }.store(in: &cancellables)
 
         let result = Result(
