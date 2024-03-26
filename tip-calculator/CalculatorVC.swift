@@ -42,6 +42,7 @@ class CalculatorVC: UIViewController {
     }
 
     private func bind() {
+        
     let input = CalculatorVM.Input(
             billPublisher: billInputView.valuePublisher,
             tipPublisher: tipInputView.valuePublisher,
@@ -49,8 +50,8 @@ class CalculatorVC: UIViewController {
 
 
         let output = vm.transform(input: input)
-        output.updateViewPublisher.sink { result in
-            print(result)
+        output.updateViewPublisher.sink { [unowned self] result in
+            resultView.configure(result: result)
         }.store(in: &cancallables)
     }
 
