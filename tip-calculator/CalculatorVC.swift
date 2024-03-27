@@ -56,7 +56,7 @@ class CalculatorVC: UIViewController {
         super.viewDidLoad()
         layout()
         bind()
-        observe()
+//        observe()
     }
 
     private func bind() {
@@ -65,7 +65,8 @@ class CalculatorVC: UIViewController {
             billPublisher: billInputView.valuePublisher,
             tipPublisher: tipInputView.valuePublisher,
             splitPublisher: splitInputView.valuePablisher,
-            logoViewTapPublisher: logoViewTapPublisher)
+            logoViewTapPublisher: logoViewTapPublisher, 
+            dissmisKeyboardTapPublisher: viewTapPublisher)
 
 
         let output = vm.transform(input: input)
@@ -76,10 +77,8 @@ class CalculatorVC: UIViewController {
         output.resultCalculatorPublisher.sink { _ in
             print("Reset the form")
         }.store(in: &cancallables)
-    }
 
-    private func observe() {
-        viewTapPublisher.sink { [unowned self] _ in
+        output.dissmisKeyboardPublisher.sink { [unowned self] _ in
             view.endEditing(true)
         }.store(in: &cancallables)
     }

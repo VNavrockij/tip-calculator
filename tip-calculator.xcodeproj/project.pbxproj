@@ -50,6 +50,8 @@
 		FAA054052BADB52A00251907 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA054042BADB52A00251907 /* String+Extension.swift */; };
 		FAAE6EBE2B8CF32900B65723 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE6EBD2B8CF32900B65723 /* AmountView.swift */; };
 		FADFEF372BB1EBAF007B2A1C /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFEF362BB1EBAF007B2A1C /* UIResponder+Extension.swift */; };
+		FAFB225D2BB47A90008E8BA3 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAFB225C2BB47A90008E8BA3 /* click.m4a */; };
+		FAFB22602BB47AC4008E8BA3 /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFB225F2BB47AC4008E8BA3 /* AudioPlayerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		FAA054042BADB52A00251907 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		FAAE6EBD2B8CF32900B65723 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		FADFEF362BB1EBAF007B2A1C /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		FAFB225C2BB47A90008E8BA3 /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
+		FAFB225F2BB47AC4008E8BA3 /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 		FA42375D2B8A256E00334A3E /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				FAFB225E2BB47AAA008E8BA3 /* Service */,
+				FAFB225B2BB47A77008E8BA3 /* Resource */,
 				FA72A3DF2BAC945E0031A8DC /* ViewModel */,
 				FA6CDB3A2B98B96F0037A352 /* Model */,
 				FA4237C12B8A382F00334A3E /* Factory */,
@@ -270,6 +276,22 @@
 				FA72A3E02BAC947B0031A8DC /* CalculatorVM.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAFB225B2BB47A77008E8BA3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB225C2BB47A90008E8BA3 /* click.m4a */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FAFB225E2BB47AAA008E8BA3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FAFB225F2BB47AC4008E8BA3 /* AudioPlayerService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +417,7 @@
 				FA42376B2B8A257000334A3E /* LaunchScreen.storyboard in Resources */,
 				FA4237BB2B8A353F00334A3E /* FixelDisplay-Bold.ttf in Resources */,
 				FA4237BE2B8A353F00334A3E /* FixelDisplay-SemiBold.ttf in Resources */,
+				FAFB225D2BB47A90008E8BA3 /* click.m4a in Resources */,
 				FA4237B42B8A346900334A3E /* FixelDisplay-Regular.ttf in Resources */,
 				FA4237682B8A257000334A3E /* Assets.xcassets in Resources */,
 			);
@@ -439,6 +462,7 @@
 				FA4237AC2B8A315100334A3E /* ThemeColor.swift in Sources */,
 				FA4237A52B8A2D3C00334A3E /* BillInputView.swift in Sources */,
 				FA4237A32B8A2D2400334A3E /* ResultView.swift in Sources */,
+				FAFB22602BB47AC4008E8BA3 /* AudioPlayerService.swift in Sources */,
 				FA42375F2B8A256E00334A3E /* AppDelegate.swift in Sources */,
 				FA4237AE2B8A315B00334A3E /* ThemeFont.swift in Sources */,
 				FA4237C32B8A384C00334A3E /* LabelFactory.swift in Sources */,
