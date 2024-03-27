@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Combine
+import CombineCocoa
 
 class CalculatorVC: UIViewController {
 
@@ -33,12 +34,29 @@ class CalculatorVC: UIViewController {
 
     private let vm = CalculatorVM()
     private var cancallables = Set<AnyCancellable>()
+    
+    private lazy var viewTapPublisher: AnyPublisher<Void, Never> = {
+        let tapGesture = UITapGestureRecognizer(target: self, action: nil)
+        view.addGestureRecognizer(tapGesture)
+        return tapGesture.tapPublisher.flatMap { _ in
+            Just(())
+        }.eraseToAnyPublisher()
+    }()
 
+    private lazy var logoViewTapPublisher: AnyPublisher<Void, Never> = {
+        let tapGesture = UITapGestureRecognizer(target: self, action: nil)
+        tapGesture.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tapGesture)
+        return tapGesture.tapPublisher.flatMap { _ in
+            Just(())
+        }.eraseToAnyPublisher()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
         bind()
+        observe()
     }
 
     private func bind() {
@@ -46,12 +64,23 @@ class CalculatorVC: UIViewController {
     let input = CalculatorVM.Input(
             billPublisher: billInputView.valuePublisher,
             tipPublisher: tipInputView.valuePublisher,
-            splitPublisher: splitInputView.valuePablisher)
+            splitPublisher: splitInputView.valuePablisher,
+            logoViewTapPublisher: logoViewTapPublisher)
 
 
         let output = vm.transform(input: input)
         output.updateViewPublisher.sink { [unowned self] result in
             resultView.configure(result: result)
+        }.store(in: &cancallables)
+
+        output.resultCalculatorPublisher.sink { _ in
+            print("Reset the form")
+        }.store(in: &cancallables)
+    }
+
+    private func observe() {
+        viewTapPublisher.sink { [unowned self] _ in
+            view.endEditing(true)
         }.store(in: &cancallables)
     }
 
