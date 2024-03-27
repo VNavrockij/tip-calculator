@@ -84,10 +84,15 @@ class BillInputView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func reset() {
+        textField.text = nil
+        billSubject.send(0)
+    }
+
     private func observe() {
         textField.textPublisher.sink { [unowned self] text in
             billSubject.send(text?.doubleValue ?? 0)
-            print("Text: \(text)")
+            print("Text: \(String(describing: text))")
         }.store(in: &cancellable)
     }
 

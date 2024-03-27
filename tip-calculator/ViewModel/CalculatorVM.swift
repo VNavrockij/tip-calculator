@@ -20,7 +20,7 @@ class CalculatorVM {
 
     struct Output {
         let updateViewPublisher: AnyPublisher<Result, Never>
-        let resultCalculatorPublisher: AnyPublisher<Void, Never>
+        let resetCalculatorPublisher: AnyPublisher<Void, Never>
         let dissmisKeyboardPublisher: AnyPublisher<Void, Never>
     }
 
@@ -49,10 +49,12 @@ class CalculatorVM {
 
         let resultCalculatorPublisher = input.logoViewTapPublisher.handleEvents(receiveOutput: { [unowned self]  in
             audioPlayerService.playSound()
-        }).eraseToAnyPublisher()
+        }).flatMap { 
+            return Just($0)
+        }.eraseToAnyPublisher()
 
         return Output(updateViewPublisher: updateViewPublisher,
-                      resultCalculatorPublisher: resultCalculatorPublisher, 
+                      resetCalculatorPublisher: resultCalculatorPublisher, 
                       dissmisKeyboardPublisher: input.dissmisKeyboardTapPublisher)
     }
 
