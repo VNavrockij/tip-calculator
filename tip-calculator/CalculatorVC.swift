@@ -78,12 +78,25 @@ class CalculatorVC: UIViewController {
             billInputView.reset()
             tipInputView.reset()
             splitInputView.reset()
+            UIView.animate(
+                withDuration: 0.1,
+                delay: 0,
+                usingSpringWithDamping: 5.0,
+                initialSpringVelocity: 0.5,
+                options: .curveEaseInOut) {
+                    self.logoView.transform = .init(scaleX: 1.5, y: 1.5)
+                } completion: { _ in
+                    UIView.animate(withDuration: 0.1) {
+                        self.logoView.transform = .identity
+                    }
+                }
         }.store(in: &cancallables)
 
         output.dissmisKeyboardPublisher.sink { [unowned self] _ in
             view.endEditing(true)
         }.store(in: &cancallables)
-    }
+
+            }
 
     private func layout() {
         view.backgroundColor = ThemeColor.bg
